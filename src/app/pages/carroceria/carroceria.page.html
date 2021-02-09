@@ -1,0 +1,14 @@
+<app-header titulo="Revisión">
+
+</app-header>
+
+<ion-content class="ion-padding">
+
+    <ion-label class="textIndicacion ion-no-padding">Invetario de carrocería </ion-label>
+
+    <app-card-camera label="Foto" icon="camera-outline" [photo]="myPhoto" (photoEmitted)="savePhoto($event)">
+
+    </app-card-camera>
+    <!-- androidx.core.content.FileProvider -->
+
+</ion-content>

@@ -1,0 +1,48 @@
+<app-header titulo="Asignar">
+
+</app-header>
+<ion-content class="ion-padding">
+
+    <form #formulario="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion ">Invetario General del vehiculo </ion-label>
+
+        <ion-list-header>
+            <ion-label>Combustible</ion-label>
+        </ion-list-header>
+
+
+        <ion-radio-group value="cuarto" mode="md" [(ngModel)]=combustible.nivel name="nivel">
+
+            <ion-item>
+                <ion-label>Lleno</ion-label>
+                <ion-radio slot="end" value="4"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Tres Cuartos</ion-label>
+                <ion-radio slot="end" value="3"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Medio</ion-label>
+                <ion-radio slot="end" value="2"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Un cuarto</ion-label>
+                <ion-radio slot="end" value="1"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+
+
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="irAAccesorios()">
+            Siguiente
+        </ion-button>
+
+
+
+    </form>
+
+
+
+</ion-content>

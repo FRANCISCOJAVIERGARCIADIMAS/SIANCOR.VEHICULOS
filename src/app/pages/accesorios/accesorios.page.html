@@ -1,0 +1,185 @@
+<app-header titulo="Asignar">
+
+</app-header>
+
+<ion-content class="ion-padding">
+
+    <form #formulario="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion ion-no-padding">Invetario General del vehiculo </ion-label>
+
+        <ion-list-header>
+            <ion-label>Accesorios</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Espejo interior:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.espejoInterior name="espejoInterior"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Espejo lateral izquierdo:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.espejoLateralIzquierdo name="espejoLateralIzquierdo"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Espejo lateral derecho:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.espejoLateralDerecho name="espejoLateralDerecho"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tapón de gasolina:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapondeGasolina name="tapondeGasolina"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapón de aceite:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapondeAceite name="tapondeAceite"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapón de radiador:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapondeRadiador name="tapondeRadiador"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Limpiadores:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.limpiadores name="limpiadores"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Deposito de agua:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.depositodeAgua name="depositodeAgua"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Perilla palanca velocidad:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.perillaPalancaVelocidad name="perillaPalancaVelocidad"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapóniceras:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.viceras name="viceras"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Manijas de elevadores:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.manijasdeElevadores name="manijasdeElevadores"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapas de puerta:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapasdePuertas name="tapasdePuertas"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cenicero:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cenicero name="cenicero"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Guantera:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.guantera name="guantera"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapetes:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapetes name="tapetes"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Bayoneta:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.bayoneta name="bayoneta"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Faros:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.faros name="faros"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cinturon de seguridad:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cinturondeSeguridad name="cinturondeSeguridad"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Boton de seguridad de puertas:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.botondeSeguridadPuertas name="botondeSeguridadPuertas"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tapon de radiador:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapondeRadiador name="tapondeRadiador"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Deposito de limpiadores:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.depositodeLimpiadores name="depositodeLimpiadores"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Manija de puerta derecha:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.manijaPuertaDerecha name="manijaPuertaDerecha"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Manija de puerta izquierda:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.manijaPuertaIzquierda name="manijaPuertaIzquierda"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cuartos delanteros:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cuartosDelanteros name="cuartosDelanteros"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cuartos traseros:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cuartosTraseros name="cuartosTraseros"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Reversa:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.reversa name="reversa"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Stop:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.stop name="stop"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Luces de navegación:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.lucesdeNavegacion name="lucesdeNavegacion"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Plafon de caja interior:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.plafondeCajaInterior name="plafondeCajaInterior"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Toldo:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.toldo name="toldo"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Parrilla:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.parrilla name="parrilla"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Luces de caja y cabina:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.lucesdeCajayCabina name="lucesdeCajayCabina"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cielo de cabina:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cielodeCabina name="cielodeCabina"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Cortinas:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.cortinas name="cortinas"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Vidrios:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.vidriosPuertaDerecha name="vidriosPuertaDerecha"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Vidrios puerta izquierda:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.vidriosPuertaIzquierda name="vidriosPuertaIzquierda"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Aletas derecha:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.aletasDerecha name="aletasDerecha"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Aletas izquierda:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.aletasIzquierda name="aletasIzquierda"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Reja de termo:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.rejadeTermo name="rejadeTermo"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Claxon:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.claxon name="claxon"></ion-checkbox>
+        </ion-item>
+
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="irAHerramientas()">
+            Siguiente
+        </ion-button>
+
+    </form>
+
+
+
+</ion-content>

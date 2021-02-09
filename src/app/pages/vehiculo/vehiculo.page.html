@@ -1,0 +1,62 @@
+<app-header titulo="Asignar"></app-header>
+
+
+<ion-content class="ion-padding">
+
+
+    <form #formulario="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion ion-no-padding">Seleccione al conductor</ion-label>
+        <ion-list-header>
+
+            <ion-label>Datos del vehiculo</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label required>No. Eco:</ion-label>
+            <ion-select ok-text="Okay" cancel-text="Cancelar">
+                <ion-select-option value="Trailer 1">1</ion-select-option>
+                <ion-select-option value="Trailer 2">2</ion-select-option>
+                <ion-select-option value="Trailer 3">3</ion-select-option>
+                <ion-select-option value="Trailer 4">4</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>Marca:</ion-label>
+            <ion-input type="text" [(ngModel)]=vehiculo.marca name="Marca" placeholder="Logistica" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Modelo:</ion-label>
+            <ion-input type="text" [(ngModel)]=vehiculo.modelo name="Modelo" placeholder="Logistica" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tipo:</ion-label>
+            <ion-input type="text" [(ngModel)]=vehiculo.tipo name="Tipo" placeholder="Logistica" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>No. serie:</ion-label>
+            <ion-input type="text" [(ngModel)]=vehiculo.noSerie name="no.Serie" placeholder="Logistica" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Placas:</ion-label>
+            <ion-input type="text" [(ngModel)]=vehiculo.placas name="Placas" placeholder="Logistica" required></ion-input>
+        </ion-item>
+
+
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="mostrarDocumentos()">
+            Siguiente
+        </ion-button>
+
+        <!-- <ion-button (click)="mostrarDocumentos()" expand="block">
+            Click me
+        </ion-button> -->
+
+    </form>
+
+
+</ion-content>

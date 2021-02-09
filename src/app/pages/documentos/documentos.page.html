@@ -1,0 +1,69 @@
+<app-header titulo="Asignar"></app-header>
+
+
+<ion-content class="ion-padding">
+
+
+    <form #formulario="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion ion-no-padding">Invetario General del vehiculo </ion-label>
+        <ion-list-header>
+            <ion-label>Documentos</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Placas de circulacion:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=documentos.placasCirculacion name="placasCirculacion"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tarjeta de circulacion:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=documentos.tarjetaCirculacion name="tarjetaCirculacion"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tarjeta de circulacion:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=documentos.polizaSeguro name="polizaSeguro"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-radio-group value="biff" mode="md" [(ngModel)]=documentos.verificacionVehicular name="verificacionVehicular">
+
+                <ion-label>Verificacion:</ion-label>
+                <ion-item>
+                    <ion-label>Primer semestre</ion-label>
+                    <ion-radio slot="start" value="semestre"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Año</ion-label>
+                    <ion-radio slot="start" value="anio"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tenencia:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=documentos.tenencia name="tenencia"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Engomado de placas:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=documentos.engomadoPlacas name="engomadoPlacas"></ion-checkbox>
+        </ion-item>
+
+
+
+        <ion-button (click)="agregarcomentario( $event )" expand="block" fill="clear" shape="round" class="textBtnComentario ion-text-center">
+            Agregar un comentario
+        </ion-button>
+
+
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="irACombustible()">
+            Siguiente
+        </ion-button>
+
+
+
+    </form>
+
+
+</ion-content>
