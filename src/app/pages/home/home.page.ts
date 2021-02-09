@@ -8,25 +8,21 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   slides: { img: string, titulo: string, desc: string }[] = [
+    
     {
-      img: '/assets/slides/photos.svg',
-      titulo: 'Logo',
-      desc: 'Mira y comparte increíbles fotos de todo el mundo'
-    },
-    {
-      img: '/assets/slides/music-player-2.svg',
+      img: '/assets/img/unidad.png',
       titulo: 'Unidades Disponibles',
-      desc: 'Toda tu música favorita está aquí'
+      desc: '4'
     },
     {
-      img: '/assets/slides/calendar.svg',
+      img: '/assets/img/conductor.png',
       titulo: 'choferes disponibles',
-      desc: 'El mejor calendario del mundo a tu disposición'
+      desc: '3'
     },
     {
-      img: '/assets/slides/placeholder-1.svg',
+      img: '/assets/img/reparacion.png',
       titulo: 'Unidades en reparacion',
-      desc: 'Siempre sabremos donde estás!'
+      desc: '1'
     }
   ];
 

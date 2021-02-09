@@ -9,7 +9,8 @@
  */
 
 import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
-import { SignaturePad } from 'angular2-signaturepad/signature-pad';
+import { SignaturePad } from 'angular2-signaturepad/angular2-signaturepad';
+import  {  SignaturePadModule  }  from  'angular2-signaturepad' ;
 @Component({
   selector: 'app-signature-pad',
   templateUrl: './signature-pad.component.html',
@@ -33,7 +34,7 @@ export class SignaturePadComponent implements OnInit {
     this.signaturePadOptions = {
       'minWidth': 0.5,
       'canvasWidth': 1000,
-      'canvasHeight': 300,
+      'canvasHeight': 150,
       'penColor': "rgb(0, 0, 255)"
     };
   }

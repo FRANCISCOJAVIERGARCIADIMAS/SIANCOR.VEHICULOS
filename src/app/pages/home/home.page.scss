@@ -8,7 +8,7 @@ ion-card {
 
 ion-card {
     height: 200px;
-    width: 300px;
+    width: 350px;
 }
 
 .slide-image {
@@ -41,4 +41,15 @@ ion-card-content {
 // Botones
 .btnMenu {
     height: 80px;
+}
+
+.txtencabezadoinicio {
+    font-size: 25px;
+    color: rgb(88, 155, 255);
+}
+
+.txtnumero {
+    font-size: 35px;
+    font-family: 'Anton' !important;
+    color: rgb(27, 101, 238);
 }

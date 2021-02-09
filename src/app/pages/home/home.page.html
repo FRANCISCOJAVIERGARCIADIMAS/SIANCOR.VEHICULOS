@@ -1,27 +1,39 @@
 <ion-header [translucent]="true" class="ion-no-border ">
     <ion-toolbar color="primary">
-        <ion-title>
-            Mi camion
+        <ion-title class="ion-text-center">
+            SIANCOR-VEHICULOS
         </ion-title>
 
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="" class="ion-padding">
+<ion-content color="">
 
     <ion-slides pager="ios" class="slide-full">
+        <ion-slide>
+            <div class="slide">
+                <img src="./assets/img/logo.png" />
+                <h2>Bienvenido</h2>
+                <!-- <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p> -->
+            </div>
+        </ion-slide>
+
         <ion-slide *ngFor="let slide of slides">
 
             <ion-card mode="ios">
                 <img [src]="slide.img" class="slide-image" />
                 <ion-card-header>
-                    <ion-card-subtitle>{{slide.titulo}}</ion-card-subtitle>
+                    <ion-card-subtitle class="txtencabezadoinicio">{{slide.titulo}}</ion-card-subtitle>
                 </ion-card-header>
-                <ion-card-content>
+                <ion-card-content class="txtnumero">
                     {{slide.desc}}
+
                 </ion-card-content>
             </ion-card>
+
         </ion-slide>
+
+
     </ion-slides>
 
     <div>

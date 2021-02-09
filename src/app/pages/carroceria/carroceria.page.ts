@@ -18,9 +18,13 @@ export class CarroceriaPage implements OnInit {
 
   savePhoto (event: string) {
     this.myPhoto = event;
-}
+  }
   
   ngOnInit() {
+  }
+
+  irAFirmas(){
+    this.router.navigate(['/firmas'])
   }
 
 }
