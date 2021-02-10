@@ -34,13 +34,14 @@ export class SignaturePadComponent implements OnInit {
     this.signaturePadOptions = {
       'minWidth': 0.5,
       'canvasWidth': 1000,
-      'canvasHeight': 150,
+      'canvasHeight': 180,
       'penColor': "rgb(0, 0, 255)"
     };
   }
 
   drawComplete() {
-    this.signature = this.signaturePad.toDataURL('image/svg+xml');
+   console.log( this.signature = this.signaturePad.toDataURL('image/svg+xml'));
+
   }
 
   onClickClean() {

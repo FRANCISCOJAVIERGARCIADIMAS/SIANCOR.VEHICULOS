@@ -1,9 +1,73 @@
-<app-header titulo="Revision">
+<app-header titulo="Revisión">
 
 </app-header>
 
 
 <ion-content class="ion-padding">
+
+
+    <form #formulario="ngForm" mode="ios">
+        <ion-list-header>
+
+            <ion-label>Datos generales</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label required>Orden de:</ion-label>
+            <ion-select ok-text="Okay" cancel-text="Cancelar">
+                <ion-select-option value="Juan">Juan</ion-select-option>
+                <ion-select-option value="lunix">Julian</ion-select-option>
+                <ion-select-option value="mac7">Joaquin</ion-select-option>
+                <ion-select-option value="mac8">Jose</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+        <ion-item>
+
+            <ion-label>Fecha:</ion-label>
+            <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Economico:</ion-label>
+            <ion-input type="text" [(ngModel)]=datosGenerales.economico name="licencia" required placeholder="ESDRDC"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Camioneta:</ion-label>
+            <ion-input type="text" [(ngModel)]=datosGenerales.camioneta name="tipo" required placeholder="A"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Placas:</ion-label>
+            <ion-input type="text" [(ngModel)]=datosGenerales.placas name="fechaVencimiento" required placeholder="09-01-2023"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Kilometraje:</ion-label>
+            <ion-input type="text" [(ngModel)]=datosGenerales.kilometraje name="Estado" required placeholder="Monterrey"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label required>Operador:</ion-label>
+            <ion-select ok-text="Okay" cancel-text="Cancelar">
+                <ion-select-option value="Juan">Juan</ion-select-option>
+                <ion-select-option value="lunix">Julian</ion-select-option>
+                <ion-select-option value="mac7">Joaquin</ion-select-option>
+                <ion-select-option value="mac8">Jose</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+
+        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="mostrarProblemas()">
+            Siguiente
+        </ion-button>
+        <!-- <ion-button (click)="mostrarVehiculo()" expand="block">
+            Click me
+        </ion-button> -->
+
+    </form>
+
 
 
 </ion-content>

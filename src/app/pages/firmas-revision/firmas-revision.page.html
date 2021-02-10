@@ -1,0 +1,40 @@
+<app-header titulo="Revisión"></app-header>
+
+<ion-content class="ion-padding">
+
+
+    <form mode="ios">
+
+
+
+        <ion-item>
+            <p>Descripción de refacción solicitada o reparación adecuada:</p>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Escribe aquí"></ion-textarea>
+        </ion-item>
+
+
+        <ion-list-header>
+            <ion-label>Flujo de firmas</ion-label>
+
+        </ion-list-header>
+
+        <ion-input class="ion-padding" placeholder="Nombre del técnico de reparación"></ion-input>
+
+        <app-signature-pad label="Técnico"> </app-signature-pad>
+
+        <app-signature-pad label="Jefe de grupo"> </app-signature-pad>
+
+        <app-signature-pad label="Autorización DCV"> </app-signature-pad>
+
+        <app-signature-pad label="Conformidad de operador"> </app-signature-pad>
+
+        <ion-button expand="block" color="primary" type="submit">
+            Finalizar
+        </ion-button>
+
+    </form>
+
+
+</ion-content>

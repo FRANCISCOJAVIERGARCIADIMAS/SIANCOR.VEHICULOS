@@ -47,6 +47,18 @@ const routes: Routes = [
     path: 'firmas',
     loadChildren: () => import('./pages/firmas/firmas.module').then( m => m.FirmasPageModule)
   },
+  {
+    path: 'problemas-unidad',
+    loadChildren: () => import('./pages/problemas-unidad/problemas-unidad.module').then( m => m.ProblemasUnidadPageModule)
+  },
+  {
+    path: 'tipo-servicio',
+    loadChildren: () => import('./pages/tipo-servicio/tipo-servicio.module').then( m => m.TipoServicioPageModule)
+  },
+  {
+    path: 'firmas-revision',
+    loadChildren: () => import('./pages/firmas-revision/firmas-revision.module').then( m => m.FirmasRevisionPageModule)
+  },
 ];
 
 @NgModule({
