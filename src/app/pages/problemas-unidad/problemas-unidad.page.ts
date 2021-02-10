@@ -34,6 +34,7 @@ export class ProblemasUnidadPage implements OnInit {
 
   ngOnInit() {
   }
+  
   irATipoServicio(){
 this.router.navigate(['/tipo-servicio'])
   }

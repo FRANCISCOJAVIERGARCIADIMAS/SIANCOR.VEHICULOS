@@ -4,31 +4,48 @@
 
 
     <form mode="ios">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12" class="ion-padding">
+                    <label>Descripción de refacción solicitada o reparación adecuada:</label>
+
+                    <ion-textarea placeholder="Escribe aquí"></ion-textarea>
+
+                </ion-col>
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12" class="ion-padding">
+                    <label>Nombre del técnico de reparación:</label>
+                    <ion-input class="ion-padding" placeholder="Escribe el nombre"></ion-input>
+                </ion-col>
+                <ion-col size="12" size-lg="12" size-md="12" size-sm="12" class="ion-padding">
+                    <ion-list-header>
+                        <ion-label>Flujo de firmas</ion-label>
+                    </ion-list-header>
+                </ion-col>
+
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12">
+                    <app-signature-pad label="Técnico"> </app-signature-pad>
+                </ion-col>
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12">
+                    <app-signature-pad label="Jefe de grupo"> </app-signature-pad>
+                </ion-col>
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12">
+                    <app-signature-pad label="Autorización DCV"> </app-signature-pad>
+                </ion-col>
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12">
+                    <app-signature-pad label="Conformidad de operador"> </app-signature-pad>
+                </ion-col>
 
 
 
-        <ion-item>
-            <p>Descripción de refacción solicitada o reparación adecuada:</p>
-        </ion-item>
-        <ion-item>
-            <ion-textarea placeholder="Escribe aquí"></ion-textarea>
-        </ion-item>
+
+            </ion-row>
+        </ion-grid>
 
 
-        <ion-list-header>
-            <ion-label>Flujo de firmas</ion-label>
 
-        </ion-list-header>
 
-        <ion-input class="ion-padding" placeholder="Nombre del técnico de reparación"></ion-input>
 
-        <app-signature-pad label="Técnico"> </app-signature-pad>
 
-        <app-signature-pad label="Jefe de grupo"> </app-signature-pad>
-
-        <app-signature-pad label="Autorización DCV"> </app-signature-pad>
-
-        <app-signature-pad label="Conformidad de operador"> </app-signature-pad>
 
         <ion-button expand="block" color="primary" type="submit">
             Finalizar

@@ -40,7 +40,7 @@ export class SignaturePadComponent implements OnInit {
   }
 
   drawComplete() {
-   console.log( this.signature = this.signaturePad.toDataURL('image/svg+xml'));
+    this.signature = this.signaturePad.toDataURL('image/svg+xml');
 
   }
 

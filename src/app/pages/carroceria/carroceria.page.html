@@ -3,19 +3,23 @@
 </app-header>
 
 <ion-content class="ion-padding">
+    <form mode="ios">
 
-    <ion-label class="textIndicacion ion-no-padding">Invetario de carrocería </ion-label>
-
-    <app-card-camera label="Foto" icon="camera-outline" [photo]="myPhoto" (photoEmitted)="savePhoto($event)">
-
-    </app-card-camera>
-    <!-- androidx.core.content.FileProvider -->
+        <ion-label class="textIndicacion ion-no-padding">Invetario de carrocería </ion-label>
 
 
 
-    <ion-button type="submit" expand="block" (click)="irAFirmas()">
-        Siguiente
-    </ion-button>
+        <app-card-camera label="Foto de la unidad" icon="car-outline" [photo]="myPhoto" (photoEmitted)="savePhoto($event)">
+
+        </app-card-camera>
+        <!-- androidx.core.content.FileProvider -->
+
+
+
+        <ion-button type="submit" expand="block" (click)="irAFirmas()">
+            Siguiente
+        </ion-button>
+    </form>
 
 
 </ion-content>
