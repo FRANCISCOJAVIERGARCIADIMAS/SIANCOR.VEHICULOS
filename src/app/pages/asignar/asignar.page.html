@@ -40,6 +40,7 @@
             <ion-input type="text" [(ngModel)]=conductor.fechaVencimiento name="fechaVencimiento" required placeholder="09-01-2023"></ion-input>
         </ion-item>
 
+
         <ion-item>
             <ion-label>Estado:</ion-label>
             <ion-input type="text" [(ngModel)]=conductor.estado name="Estado" required placeholder="Monterrey"></ion-input>
@@ -48,6 +49,7 @@
         <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="mostrarVehiculo()">
             Siguiente
         </ion-button>
+
         <!-- <ion-button (click)="mostrarVehiculo()" expand="block">
             Click me
         </ion-button> -->
