@@ -1,0 +1,43 @@
+[
+
+    {
+        "conductorId": 1,
+        "nombre": "Juanito",
+        "departamento": "ventas",
+        "noLicencia": "FG-924226",
+        "tipo": "B",
+        "fechadeVencimiento": "04-09-2021",
+        "estado": "Veracruz",
+        "disponibilidad": true
+    },
+    {
+        "conductorId": 2,
+        "nombre": "Gerardo",
+        "departamento": "Compras",
+        "noLicencia": "TR-3223",
+        "tipo": "D",
+        "fechadeVencimiento": "04-09-2021",
+        "estado": "Chiapas",
+        "disponibilidad": true
+    },
+    {
+        "conductorId": 3,
+        "nombre": "Andres",
+        "departamento": "Logistica",
+        "noLicencia": "YU-11515",
+        "tipo": "C",
+        "fechadeVencimiento": "04-09-2021",
+        "estado": "CDMX",
+        "disponibilidad": true
+    },
+    {
+        "conductorId": 4,
+        "nombre": "Santiago",
+        "departamento": "Cobranza",
+        "noLicencia": "PS-452151",
+        "tipo": "A",
+        "fechadeVencimiento": "04-09-2021",
+        "estado": "Puebla",
+        "disponibilidad": true
+    }
+]

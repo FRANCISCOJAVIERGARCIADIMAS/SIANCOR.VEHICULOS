@@ -8,6 +8,8 @@ import { AsignarPageRoutingModule } from './asignar-routing.module';
 
 import { AsignarPage } from './asignar.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { ConductoresService } from '../../services/conductores.service';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,8 +17,12 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     AsignarPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   declarations: [AsignarPage]
 })
-export class AsignarPageModule {}
+export class AsignarPageModule {
+
+
+}

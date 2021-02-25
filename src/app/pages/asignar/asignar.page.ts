@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { VehiculoPage } from '../vehiculo/vehiculo.page';
+import { ConductoresService } from '../../services/conductores.service';
+import { Persona } from '../../interfaces/interfaces-conductores';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-asignar',
@@ -10,26 +13,27 @@ import { VehiculoPage } from '../vehiculo/vehiculo.page';
 })
 export class AsignarPage implements OnInit {
 
-  
-  conductor = {
-    nombre:'Juan',
-    departamento:'Ventas',
-    licencia:'XL-928264',
-    tipo:'B',
-    fechaVencimiento:'04-09-2021',
-    estado:'Veracruz'
-  }
+  conductores: Observable<Persona[]>;
+  itemSeleccionado: string = '0';
+  // verSeleccion: string = '';
   
   constructor(
-    private router:Router
+    private router:Router,
+    private conductoresService: ConductoresService
    ) { }
 
- mostrarVehiculo(){
-   this.router.navigate(['/vehiculo'])
- }
-  
-  
   ngOnInit() {
+    this.conductores = this.conductoresService.getConductores();
   }
+  // capturar(){
+    
+
+  //   this.verSeleccion = this.itemSeleccionado;
+  //   console.log(this.itemSeleccionado );
+  // }
+  
+  mostrarVehiculo(){
+     this.router.navigate(['/vehiculo'])
+   }
 
 }

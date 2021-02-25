@@ -8,6 +8,7 @@ import { VehiculoPageRoutingModule } from './vehiculo-routing.module';
 
 import { VehiculoPage } from './vehiculo.page';
 import { ComponentsModule } from '../../components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../../components/components.module';
     FormsModule,
     IonicModule,
     VehiculoPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   declarations: [VehiculoPage],
 })

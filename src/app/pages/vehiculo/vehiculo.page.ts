@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Unidad } from 'src/app/interfaces/interfaces-unidades';
+import { UnidadesTransporteService } from '../../services/unidades-transporte.service';
 
 @Component({
   selector: 'app-vehiculo',
@@ -8,25 +11,22 @@ import { Router } from '@angular/router';
 })
 export class VehiculoPage implements OnInit {
 
-  vehiculo = {
-    noEco:'21',
-    marca:'Ford',
-    modelo:'2019',
-    tipo:'Redilas',
-    noSerie:'192-333-452',
-    placas:'FD-234-JSK'
-  }
-  
+  unidades: Observable<Unidad[]>;
+  itemSeleccionado: string = '0';
 
   constructor(
-    private router:Router
+    private router:Router,
+    private unidadesTransporteService: UnidadesTransporteService
    ) { }
 
+  
+  ngOnInit() {
+    this.unidades = this.unidadesTransporteService.getUnidades();
+  }
+  
   mostrarDocumentos(){
     this.router.navigate(['/documentos'])
   }
 
-  ngOnInit() {
-  }
 
 }

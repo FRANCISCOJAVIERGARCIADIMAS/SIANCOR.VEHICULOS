@@ -1,0 +1,65 @@
+[{
+        "noEconomico": "CAM-2045",
+        "marca": "Nissan",
+        "modelo": "2020",
+        "tipo": "Batea",
+        "noSerie": "210-521-542",
+        "placas": "GD-09-JDK",
+        "documentos": {
+            "placasdeCirculacion": true,
+            "tarjetadeCirculacion": true,
+            "polizadeSeguro": true,
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
+            "tenencia": true,
+            "engomado": false
+
+        },
+        "disponibilidad": true
+    },
+    {
+        "noEconomico": "JSL-933",
+        "marca": "Nissan",
+        "modelo": "2019",
+        "tipo": "Batea",
+        "noSerie": "210-521-542",
+        "placas": "GD-09-JDK",
+        "documentos": {
+            "placasdeCirculacion": true,
+            "tarjetadeCirculacion": true,
+            "polizadeSeguro": true,
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
+            "tenencia": true,
+            "engomado": false
+
+        },
+        "disponibilidad": true
+    },
+    {
+        "noEconomico": "TRE-845",
+        "marca": "Nissan",
+        "modelo": "2019",
+        "tipo": "Batea",
+        "noSerie": "210-521-542",
+        "placas": "GD-09-JDK",
+        "documentos": {
+            "placasdeCirculacion": true,
+            "tarjetadeCirculacion": true,
+            "polizadeSeguro": true,
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
+            "tenencia": true,
+            "engomado": false
+
+        },
+        "disponibilidad": true
+    }
+
+]
