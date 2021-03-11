@@ -3,7 +3,7 @@
     {
         "conductorId": 1,
         "nombre": "Juanito",
-        "departamento": "ventas",
+        "departamento": "Ventas",
         "noLicencia": "FG-924226",
         "tipo": "B",
         "fechadeVencimiento": "04-09-2021",

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Unidad } from 'src/app/interfaces/interfaces-unidades';
 import { UnidadesTransporteService } from '../../services/unidades-transporte.service';
+import { Unidad } from '../../interfaces/interfaces-unidades';
+import { Observable } from 'rxjs';
+import { UnidadesDocumentosService } from '../../services/unidades-documentos.service';
 
 @Component({
   selector: 'app-vehiculo',
@@ -12,21 +13,39 @@ import { UnidadesTransporteService } from '../../services/unidades-transporte.se
 export class VehiculoPage implements OnInit {
 
   unidades: Observable<Unidad[]>;
-  itemSeleccionado: string = '0';
+
+ itemSeleccionado: string = ' ';
+
+ noEco: string = '';
+  // verSeleccio: string = ' ';
+
 
   constructor(
     private router:Router,
-    private unidadesTransporteService: UnidadesTransporteService
+    private unidadesServices: UnidadesTransporteService,
+    private unidadesDocumentos: UnidadesDocumentosService
    ) { }
 
   
   ngOnInit() {
-    this.unidades = this.unidadesTransporteService.getUnidades();
+    this.unidades = this.unidadesServices.getUnidades();
+   
+  }
+
+  enviarnoEco(){
+    this.unidadesDocumentos.sendnoEconomico(this.itemSeleccionado)
   }
   
   mostrarDocumentos(){
     this.router.navigate(['/documentos'])
+    this.enviarnoEco();
   }
+
+// Metodo para capturar el vlor enviado
+  //   capturar2(){
+  //   this.verSeleccio = this.itemSeleccionado;
+  //   console.log(this.verSeleccio  );
+  // }
 
 
 }

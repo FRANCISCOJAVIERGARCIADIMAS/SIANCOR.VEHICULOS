@@ -7,7 +7,7 @@ export class FiltroPipe implements PipeTransform {
 
   transform(arreglo: any[],
             texto: string = '',
-            columna: string = 'title'
+            columna: string = ''
           ): any[] {
     if ( texto === ''){
       return arreglo;

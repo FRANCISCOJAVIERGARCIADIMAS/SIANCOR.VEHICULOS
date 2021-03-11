@@ -7,22 +7,22 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  slides: { img: string, titulo: string, desc: string }[] = [
+  slides: { img: string, titulo: string, cantidad: string }[] = [
     
     {
       img: '/assets/img/unidad.png',
       titulo: 'Unidades Disponibles',
-      desc: '4'
+      cantidad: '4'
     },
     {
       img: '/assets/img/conductor.png',
       titulo: 'choferes disponibles',
-      desc: '3'
+      cantidad: '3'
     },
     {
       img: '/assets/img/reparacion.png',
       titulo: 'Unidades en reparacion',
-      desc: '1'
+      cantidad: '1'
     }
   ];
 

@@ -1,6 +1,4 @@
-[
-
-    {
+[{
         "noEconomico": "CAM-2045",
         "marca": "Ford",
         "modelo": "2020",
@@ -11,7 +9,10 @@
             "placasdeCirculacion": true,
             "tarjetadeCirculacion": true,
             "polizadeSeguro": true,
-            "verificacionVehicular": "PrimerSemestre",
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
             "tenencia": true,
             "engomado": false
 
@@ -26,10 +27,13 @@
         "noSerie": "210-521-542",
         "placas": "GD-09-JDK",
         "documentos": {
-            "placasdeCirculacion": false,
+            "placasdeCirculacion": true,
             "tarjetadeCirculacion": true,
             "polizadeSeguro": true,
-            "verificacionVehicular": "Anio",
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
             "tenencia": true,
             "engomado": false
 
@@ -47,9 +51,12 @@
             "placasdeCirculacion": true,
             "tarjetadeCirculacion": true,
             "polizadeSeguro": true,
-            "verificacionVehicular": "Anio",
+            "verificacionVehicular": {
+                "primerSemestre": true,
+                "anio": false
+            },
             "tenencia": true,
-            "engomado": true
+            "engomado": false
 
         },
         "disponibilidad": true

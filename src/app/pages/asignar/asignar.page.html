@@ -2,7 +2,7 @@
 
 <ion-content class="ion-padding" mode="ios">
 
-    <form #formulario="ngForm" mode="ios">
+    <form #formulario2="ngForm" mode="ios">
 
         <ion-label class="textIndicacion">Seleccione al conductor</ion-label>
         <ion-list-header>
@@ -12,11 +12,17 @@
 
         <ion-item>
             <ion-label required>Nombre:</ion-label>
-            <ion-select ok-text="Seleccionar" cancel-text="Cancelar" name=nombre [(ngModel)]="itemSeleccionado">
-                <ion-select-option *ngFor="let c of conductores | async">{{c.nombre}}</ion-select-option>
-            </ion-select>
-        </ion-item>
 
+
+
+
+            <ion-select name=nombre [(ngModel)]="itemSeleccionado" (ionChange)="capturar()" interface="action-sheet">
+                <ion-select-option *ngFor="let ci of conductores | async">{{ci.nombre}}</ion-select-option>
+            </ion-select>
+
+
+
+        </ion-item>
 
         <ion-list *ngFor="let con of( conductores | async) | filtro:itemSeleccionado:'nombre'">
             <ion-item>
