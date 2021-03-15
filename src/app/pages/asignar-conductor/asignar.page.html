@@ -2,29 +2,27 @@
 
 <ion-content class="ion-padding" mode="ios">
 
-    <form #formulario2="ngForm" mode="ios">
+    <form (ngSubmit)="enviaridconductor (formAsignacion )" #formAsignacion="ngForm" mode="ios">
 
         <ion-label class="textIndicacion">Seleccione al conductor</ion-label>
         <ion-list-header>
 
             <ion-label>Datos del conductor</ion-label>
         </ion-list-header>
-
         <ion-item>
             <ion-label required>Nombre:</ion-label>
+        </ion-item>
 
+        <ion-item>
 
-
-
-            <ion-select name=nombre [(ngModel)]="itemSeleccionado" (ionChange)="capturar()" interface="action-sheet">
-                <ion-select-option *ngFor="let ci of conductores | async">{{ci.nombre}}</ion-select-option>
+            <!-- (ionChange)="capturar()" -->
+            <ion-select name=idConductor [(ngModel)]="asignacion.idConductor" interface="action-sheet">
+                <ion-select-option *ngFor="let c of conductores | async" value={{c.idConductor}}>{{c.nombre}}</ion-select-option>
             </ion-select>
-
-
 
         </ion-item>
 
-        <ion-list *ngFor="let con of( conductores | async) | filtro:itemSeleccionado:'nombre'">
+        <ion-list *ngFor="let con of( conductores | async) | filtro:asignacion.idConductor:'idConductor'">
             <ion-item>
                 <ion-label>Departamento: {{con.departamento}}</ion-label>
             </ion-item>
@@ -40,7 +38,7 @@
             <ion-item>
                 <ion-label>Estado: {{con.estado}} </ion-label>
             </ion-item>
-            <ion-button expand="block" (click)="mostrarVehiculo()">
+            <ion-button type="submit" expand="block" (click)="mostrarVehiculo()">
                 Siguiente
             </ion-button>
         </ion-list>

@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'asignar',
-    loadChildren: () => import('./pages/asignar/asignar.module').then( m => m.AsignarPageModule)
+    loadChildren: () => import('./pages/asignar-conductor/asignar.module').then( m => m.AsignarPageModule)
   },
   {
     path: 'revision',
@@ -21,23 +21,23 @@ const routes: Routes = [
   },
   {
     path: 'vehiculo',
-    loadChildren: () => import('./pages/vehiculo/vehiculo.module').then( m => m.VehiculoPageModule)
+    loadChildren: () => import('./pages/asignar-vehiculo/vehiculo.module').then( m => m.VehiculoPageModule)
   },
   {
     path: 'documentos',
-    loadChildren: () => import('./pages/documentos/documentos.module').then( m => m.DocumentosPageModule)
+    loadChildren: () => import('./pages/asignar-vehiculo-documentos/documentos.module').then( m => m.DocumentosPageModule)
   },
   {
     path: 'combustible',
-    loadChildren: () => import('./pages/combustible/combustible.module').then( m => m.CombustiblePageModule)
+    loadChildren: () => import('./pages/asignar-combustible/combustible.module').then( m => m.CombustiblePageModule)
   },
   {
     path: 'accesorios',
-    loadChildren: () => import('./pages/accesorios/accesorios.module').then( m => m.AccesoriosPageModule)
+    loadChildren: () => import('./pages/asignar-accesorios/accesorios.module').then( m => m.AccesoriosPageModule)
   },
   {
     path: 'herramientas',
-    loadChildren: () => import('./pages/herramientas/herramientas.module').then( m => m.HerramientasPageModule)
+    loadChildren: () => import('./pages/asignar-herramientas/herramientas.module').then( m => m.HerramientasPageModule)
   },
   {
     path: 'carroceria',
@@ -45,19 +45,19 @@ const routes: Routes = [
   },
   {
     path: 'firmas',
-    loadChildren: () => import('./pages/firmas/firmas.module').then( m => m.FirmasPageModule)
+    loadChildren: () => import('./pages/asignar-firmas/firmas.module').then( m => m.FirmasPageModule)
   },
   {
     path: 'problemas-unidad',
-    loadChildren: () => import('./pages/problemas-unidad/problemas-unidad.module').then( m => m.ProblemasUnidadPageModule)
+    loadChildren: () => import('./pages/revision-problemas-unidad/problemas-unidad.module').then( m => m.ProblemasUnidadPageModule)
   },
   {
     path: 'tipo-servicio',
-    loadChildren: () => import('./pages/tipo-servicio/tipo-servicio.module').then( m => m.TipoServicioPageModule)
+    loadChildren: () => import('./pages/revision-tipo-servicio/tipo-servicio.module').then( m => m.TipoServicioPageModule)
   },
   {
     path: 'firmas-revision',
-    loadChildren: () => import('./pages/firmas-revision/firmas-revision.module').then( m => m.FirmasRevisionPageModule)
+    loadChildren: () => import('./pages/revision-firmas/firmas-revision.module').then( m => m.FirmasRevisionPageModule)
   },
 ];
 

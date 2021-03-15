@@ -11,10 +11,9 @@
             "placasdeCirculacion": true,
             "tarjetadeCirculacion": true,
             "polizadeSeguro": true,
-            "verificacionVehicular": "PrimerSemestre",
+            "verificacionVehicular": "primerSemestre",
             "tenencia": true,
             "engomado": false
-
         },
         "disponibilidad": true
     },
@@ -32,7 +31,6 @@
             "verificacionVehicular": "Anio",
             "tenencia": true,
             "engomado": false
-
         },
         "disponibilidad": true
     },
@@ -50,7 +48,6 @@
             "verificacionVehicular": "Anio",
             "tenencia": true,
             "engomado": true
-
         },
         "disponibilidad": true
     }

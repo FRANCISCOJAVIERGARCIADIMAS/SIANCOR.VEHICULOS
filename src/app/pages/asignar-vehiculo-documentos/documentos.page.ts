@@ -2,10 +2,12 @@ import { Component, OnInit, Output, Input } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { AgregarComentarioComponent } from '../../components/agregar-comentario/agregar-comentario.component';
 import { Router } from '@angular/router';
-import { UnidadesDocumentosService } from '../../services/unidades-documentos.service';
+import { DataAsignacionService } from '../../services/data-asignacion.service';
 import { UnidadesTransporteService } from 'src/app/services/unidades-transporte.service';
 import { Unidad } from 'src/app/interfaces/interfaces-unidades';
 import { Observable } from 'rxjs';
+import { NgForm } from '@angular/forms';
+import { AsignacionModel } from 'src/app/models/asignacion.model';
 
 @Component({
   selector: 'app-documentos',
@@ -14,54 +16,45 @@ import { Observable } from 'rxjs';
 })
 export class DocumentosPage implements OnInit {
 
- 
-
+  asignacion = new AsignacionModel();
   unidades: Observable<Unidad[]>;
 
-  noEco: string = 'x' ;
-
-  noEcoDocs:any;
-
+  // variables para manipular el noEconomico
+  noEconomico: string = 'x' ;
+  noEconomicoA:any;
 
   constructor( 
-      private popoverCtrl: PopoverController,
       private router:Router,
-      private unidadesDocumentos: UnidadesDocumentosService,
       private unidadesServices: UnidadesTransporteService,
+      private dataAsignacion: DataAsignacionService
       ) { }
-
 
   irACombustible(){
     this.router.navigate(['/combustible'])
   }
 
-  agregarComentario(){
-this.router.navigate(['/'])
-  }
-
   ngOnInit() {
+    // obtenemos toda la data de las unidades
     this.unidades = this.unidadesServices.getUnidades();
-  this.obtenernoEco();
-    
+    // obtenemos el id de la unidad seleccionada para filtrar en la vista
+    this.obtenernoEconomico();
   }
 
-  obtenernoEco(){
-    this.unidadesDocumentos.$getnoEconomico.subscribe( data => {
-      this.noEcoDocs = data;
-      this.noEco = this.noEcoDocs; 
+  obtenernoEconomico(){
+    this.dataAsignacion.$getnoEconomico.subscribe( data => {
+      this.noEconomicoA = data;
+      this.noEconomico = this.noEconomicoA; 
     }).unsubscribe();
   }
 
-  async agregarcomentario(){
-
-    const popover = await this.popoverCtrl.create({
-      component: AgregarComentarioComponent,
-      translucent: true,
-      
-    });
-    await popover.present();
-
+  enviarDocumentos( form: NgForm){
+    this.asignacion.documentos = form.value;
+    console.log(this.asignacion.documentos);
+    this.dataAsignacion.sendDocumentos(this.asignacion.documentos)
+    this.irACombustible();
   }
+
+ 
 
 
 }

@@ -1,8 +1,8 @@
 [
 
     {
-        "conductorId": 1,
-        "nombre": "Juanito",
+        "idConductor": "1",
+        "nombre": "Juan Jazmin Martínez",
         "departamento": "Ventas",
         "noLicencia": "FG-924226",
         "tipo": "B",
@@ -11,8 +11,8 @@
         "disponibilidad": true
     },
     {
-        "conductorId": 2,
-        "nombre": "Gerardo",
+        "idConductor": "2",
+        "nombre": "Gerson Dimas Flores",
         "departamento": "Compras",
         "noLicencia": "TR-3223",
         "tipo": "D",
@@ -21,8 +21,8 @@
         "disponibilidad": true
     },
     {
-        "conductorId": 3,
-        "nombre": "Andres",
+        "idConductor": "3",
+        "nombre": "Andres Mendoza del Toro",
         "departamento": "Logistica",
         "noLicencia": "YU-11515",
         "tipo": "C",
@@ -31,8 +31,8 @@
         "disponibilidad": true
     },
     {
-        "conductorId": 4,
-        "nombre": "Santiago",
+        "idConductor": "4",
+        "nombre": "Santiago López Pérez",
         "departamento": "Cobranza",
         "noLicencia": "PS-452151",
         "tipo": "A",

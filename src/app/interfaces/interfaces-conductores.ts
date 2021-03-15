@@ -1,5 +1,5 @@
 export interface Persona {
-  conductorId: number;
+  idConductor: number;
   nombre: string;
   departamento: string;
   noLicencia: string;
@@ -7,5 +7,4 @@ export interface Persona {
   fechadeVencimiento: string;
   estado: string;
   disponibilidad: boolean;
-
 }

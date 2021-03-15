@@ -1,5 +1,5 @@
 .slide-full {
-    height: 70% !important;
+    height: 50% !important;
 }
 
 ion-card {
@@ -12,13 +12,13 @@ ion-card {
 }
 
 .slide-image {
-    width: 100px;
+    width: 80px;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: -50px;
+    top: -40px;
 }
 
 ion-card-header {
@@ -40,7 +40,7 @@ ion-card-content {
 
 // Botones
 .btnMenu {
-    height: 80px;
+    height: 50px;
 }
 
 .txtencabezadoinicio {
@@ -52,9 +52,4 @@ ion-card-content {
     font-size: 35px;
     font-family: 'Anton' !important;
     color: rgb(27, 101, 238);
-}
-
-.coloAzul {
-    background: rgb(6, 96, 255) !important;
-    background: linear-gradient(140deg, rgba(6, 96, 255, 1) 7%, rgba(28, 64, 128, 1) 94%) !important;
 }

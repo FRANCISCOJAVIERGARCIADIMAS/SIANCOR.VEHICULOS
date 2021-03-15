@@ -5,7 +5,7 @@
 <ion-content class="ion-padding">
 
 
-    <form #formulario="ngForm" mode="ios">
+    <form (ngSubmit)="enviarAccesorios (formDocumentos )" #formDocumentos="ngForm" mode="ios">
         <ion-grid>
             <ion-row>
                 <ion-col size="12" size-lg="12" size-sm="12">
@@ -73,7 +73,7 @@
                 </ion-col>
                 <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
                     <ion-item>
-                        <ion-label>Tapóniceras:</ion-label>
+                        <ion-label>Viceras:</ion-label>
                         <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.viceras name="viceras"></ion-checkbox>
                     </ion-item>
                 </ion-col>
@@ -133,7 +133,7 @@
                 </ion-col>
                 <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
                     <ion-item>
-                        <ion-label>Tapon de radiador:</ion-label>
+                        <ion-label>Tapon de licuadora:</ion-label>
                         <ion-checkbox color="primary" checked slot="end" [(ngModel)]=accesorios.tapondeRadiador name="tapondeRadiador"></ion-checkbox>
                     </ion-item>
                 </ion-col>
@@ -263,7 +263,7 @@
             </ion-row>
         </ion-grid>
 
-        <ion-button [disabled]="formulario.invalid" type="submit" expand="block" (click)="irAHerramientas()">
+        <ion-button type="submit" expand="block" (click)="irAHerramientas()">
             Siguiente
         </ion-button>
 

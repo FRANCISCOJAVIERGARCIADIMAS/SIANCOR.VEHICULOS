@@ -1,0 +1,55 @@
+<app-header titulo="Asignar"></app-header>
+
+<ion-content class="ion-padding">
+
+    <form (ngSubmit)="enviarHerramientas (formHerramientas )" #formHerramientas="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion ion-no-padding">Invetario General del vehiculo </ion-label>
+        <ion-list-header>
+            <ion-label>Herramientas</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Refracción de llanta:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.refracciondeLlanta name="refracciondeLlanta"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Maneral dado llanta:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.maneralDadoLlanta name="maneralDadoLlanta"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Desarmador plano/cruz:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.desarmadorPlanoCruz name="desarmadorPlanoCruz"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Diablo:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.diablo name="diablo"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Juego de cables:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.juegodecables name="juegodecables"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Gato hidraulico:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.gatoHidraulico name="gatoHidraulico"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Reflejantes:</ion-label>
+            <ion-checkbox color="primary" checked slot="end" [(ngModel)]=herramientas.reflejantes name="reflejantes"></ion-checkbox>
+        </ion-item>
+
+        <ion-button type="submit" expand="block" (click)="irACarroceria()">
+            Siguiente
+        </ion-button>
+
+
+
+    </form>
+
+
+
+</ion-content>

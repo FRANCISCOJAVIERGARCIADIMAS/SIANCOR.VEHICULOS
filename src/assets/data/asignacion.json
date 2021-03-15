@@ -1,0 +1,75 @@
+[
+
+    {
+        "idCondcutor": "C-01",
+        "noEconomico": "CAM-2045",
+        "documentos": {
+            "placasdeCirculacion": true,
+            "tarjetadeCirculacion": true,
+            "polizadeSeguro": true,
+            "verificacionVehicular": "primerSemestre",
+            "tenencia": true,
+            "engomado": false,
+            "comentario": "sin comentarios"
+        },
+        "nivelCombustible": "medio",
+        "accesorios": {
+            "espejoInterior": true,
+            "espejoLateralIzquierdo": true,
+            "espejoLateralDerecho": true,
+            "tapondeGasolina": true,
+            "tapondeRadiador": true,
+            "tapondeAceite": true,
+            "limpiadores": false,
+            "depositodeAgua": false,
+            "perillaPalancaVelocidad": false,
+            "viseras": true,
+            "manijasdeElevadores": true,
+            "tapasdePuerta": true,
+            "cenicero": true,
+            "guantera": true,
+            "tapetes": false,
+            "bayoneta": false,
+            "faros": false,
+            "cinturondeSeguridad": true,
+            "botonSeguridadPuerta": true,
+            "tapondeLicuadora": true,
+            "depositodeLimpiadores": true,
+            "manijadePuertaDerecha": false,
+            "manijadePuertaIzquierda": true,
+            "cuartosDelanteros": false,
+            "cuartosTraseros": false,
+            "reversa": true,
+            "stop": true,
+            "lucesdeNavegacion": true,
+            "plafondeCajaInterior": true,
+            "toldo": true,
+            "parrilla": false,
+            "lucesdeCajayCabina": false,
+            "cielodeCabina": true,
+            "cortinas": true,
+            "vidrios": true,
+            "vidriosPuertaIzquierda": true,
+            "aletasDerecha": true,
+            "aletasIzquierda": false,
+            "rejadeTermo": false,
+            "claxon": false
+
+        },
+        "herramientas": {
+            "refracciondeLlanta": true,
+            "maneralDadoLlanta": true,
+            "desarmadorPlanoCruz": true,
+            "diablo": false,
+            "juegodeCables": true,
+            "gatoHidraulico": false,
+            "reflejantes": false
+        },
+        "firmas": {
+            "jefedeGrupo": "xxxxxxx",
+            "taller": "xxxxxxx",
+            "jefedeVentas": "xxxxxxx",
+            "vendedor": "xxxxxxx"
+        }
+    }
+]

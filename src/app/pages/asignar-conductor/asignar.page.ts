@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { ConductoresService } from '../../services/conductores.service';
 import { Persona } from '../../interfaces/interfaces-conductores';
 import { Observable } from 'rxjs';
+import { DataAsignacionService } from '../../services/data-asignacion.service';
+import { AsignacionModel } from '../../models/asignacion.model';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -13,30 +16,26 @@ import { Observable } from 'rxjs';
 export class AsignarPage implements OnInit {
 
   conductores: Observable<Persona[]>;
-  itemSeleccionado: string = ' ';
-  verSeleccion: string = '';
+  
+  asignacion = new AsignacionModel();
   
   constructor(
     private router:Router,
-    private conductoresService: ConductoresService
+    private conductoresService: ConductoresService,
+    private dataAsignacionService: DataAsignacionService
    ) { }
 
   ngOnInit() {
     this.conductores = this.conductoresService.getConductores();
   }
 
-  capturar(){
-    
-
-    this.verSeleccion = this.itemSeleccionado;
-    console.log(this.verSeleccion);
-  }
-  
-
-  // Metodo para capturar el vlor enviado
-
   mostrarVehiculo(){
      this.router.navigate(['/vehiculo'])
    }
 
+   enviaridconductor( form: NgForm){
+    this.asignacion.idConductor = form.value;
+    console.log(this.asignacion.idConductor);
+    this.dataAsignacionService.sendIdConductor(this.asignacion.idConductor);
+   }
 }

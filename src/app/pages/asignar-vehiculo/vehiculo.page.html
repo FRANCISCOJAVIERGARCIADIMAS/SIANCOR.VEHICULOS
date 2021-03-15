@@ -4,7 +4,7 @@
 <ion-content class="ion-padding" mode="ios">
 
 
-    <form #formulario="ngForm" mode="ios">
+    <form (ngSubmit)="enviarNoEconomico (formVehiculo )" #formVehiculo="ngForm" mode="ios">
 
         <ion-label class="textIndicacion ion-no-padding">Seleccione la unidad</ion-label>
         <ion-list-header>
@@ -15,15 +15,15 @@
 
         <ion-item>
             <ion-label required>No. Eco:</ion-label>
-            <ion-select name=nombrex [(ngModel)]="itemSeleccionado" interface="action-sheet">
-                <ion-select-option *ngFor="let unt of unidades | async" value={{unt.noEconomico}}> {{unt.noEconomico}}</ion-select-option>
+            <ion-select name=noEconomico [(ngModel)]="asignacion.noEconomico" interface="action-sheet">
+                <ion-select-option *ngFor="let u of unidades | async" value={{u.noEconomico}}> {{u.noEconomico}}</ion-select-option>
             </ion-select>
         </ion-item>
 
 
 
 
-        <ion-list *ngFor="let uni of( unidades | async) | filtro:itemSeleccionado:'noEconomico'">
+        <ion-list *ngFor="let uni of( unidades | async) | filtro:asignacion.noEconomico:'noEconomico'">
 
             <ion-item>
                 <ion-label>Marca: {{uni.marca}}</ion-label>
@@ -44,7 +44,7 @@
                 <ion-label>Placas:{{uni.placas}}</ion-label>
             </ion-item>
 
-            <ion-button expand="block" (click)="mostrarDocumentos()">
+            <ion-button expand="block" type="submit" (click)="mostrarDocumentos()">
                 Siguiente
             </ion-button>
 
