@@ -32,16 +32,16 @@ export class SignaturePadComponent implements OnInit {
 
   ngOnInit() {
     this.signaturePadOptions = {
-      'minWidth': 0.5,
-      'canvasWidth': 1000,
-      'canvasHeight': 180,
-      'penColor': "rgb(0, 0, 255)"
+      'minWidth': 1,
+      'minHeight': 1,
+      'canvasWidth': 3000 ,
+      'canvasHeight': 700,
+      'penColor': "rgb(45,108,255)"
     };
   }
 
   drawComplete() {
     this.signature = this.signaturePad.toDataURL('image/svg+xml');
-
   }
 
   onClickClean() {
