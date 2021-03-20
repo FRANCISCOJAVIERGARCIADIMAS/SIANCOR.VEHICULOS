@@ -1,0 +1,273 @@
+<app-header titulo="Revisión">
+
+</app-header>
+
+
+<ion-content class="ion-padding" mode="ios">
+
+
+    <ion-grid>
+        <ion-row *ngFor="let asig of( asignaciones | async) | filtro:folioAsignacion:'folioAsignacion'">
+            <ion-list-header>
+                <ion-label>Accesorios</ion-label>
+            </ion-list-header>
+
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Espejo interior:</ion-label>
+                    <ion-checkbox disabled=true color="primary" checked="{{asig.accesorios.espejoInterior}}" slot="end" name="espejoInterior"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Espejo lateral izquierdo:</ion-label>
+                    <ion-checkbox disabled=true color="primary" checked="{{asig.accesorios.espejoLateralIzquierdo}}" slot="end" name="espejoLateralIzquierdo"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Espejo lateral derecho:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.espejoLateralDerecho}}" name="espejoLateralDerecho"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapón de gasolina:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapondeGasolina}}" name="tapondeGasolina"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapón de aceite:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapondeAceite}}" name="tapondeAceite"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapón de radiador:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapondeRadiador}}" name="tapondeRadiador"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Limpiadores:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.limpiadores}}" name="limpiadores"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Deposito de agua:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.depositodeAgua}}" name="depositodeAgua"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Perilla palanca velocidad:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.perillaPalancaVelocidad}}" name="perillaPalancaVelocidad"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Viseras:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.viseras}}" name="viceras"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Manijas de elevadores:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.manijasdeElevadores}}" name="manijasdeElevadores"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapas de puerta:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapasdePuerta}}" name="tapasdePuertas"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cenicero:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cenicero}}" name="cenicero"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Guantera:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.guantera}}" name="guantera"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapetes:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapetes}}" name="tapetes"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Bayoneta:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.bayoneta}}" name="bayoneta"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Faros:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.faros}}" name="faros"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cinturon de seguridad:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cinturondeSeguridad}}" name="cinturondeSeguridad"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Boton de seguridad de puertas:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.botonSeguridadPuerta}}" name="botondeSeguridadPuertas"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Tapon de licuadora:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.tapondeRadiador}}" name="tapondeRadiador"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Deposito de limpiadores:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.depositodeLimpiadores}}" name="depositodeLimpiadores"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Manija de puerta derecha:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.manijadePuertaDerecha}}" name="manijaPuertaDerecha"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Manija de puerta izquierda:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.manijadePuertaIzquierda}}" name="manijaPuertaIzquierda"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cuartos delanteros:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cuartosDelanteros}}" name="cuartosDelanteros"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cuartos traseros:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cuartosTraseros}}" name="cuartosTraseros"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Reversa:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.reversa}}" name="reversa"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Stop:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.stop}}" name="stop"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Luces de navegación:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.lucesdeNavegacion}}" name="lucesdeNavegacion"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Plafon de caja interior:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.plafondeCajaInterior}}" name="plafondeCajaInterior"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Toldo:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.toldo}}" name="toldo"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Parrilla:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.parrilla}}" name="parrilla"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Luces de caja y cabina:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.lucesdeCajayCabina}}" name="lucesdeCajayCabina"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cielo de cabina:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cielodeCabina}}" name="cielodeCabina"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Cortinas:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.cortinas}}" name="cortinas"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Vidrios puerta derecha:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.vidriosPuertaDerecha}}" name="vidriosPuertaDerecha"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Vidrios puerta izquierda:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.vidriosPuertaIzquierda}}" name="vidriosPuertaIzquierda"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Aletas derecha:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.aletasDerecha}}" name="aletasDerecha"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Aletas izquierda:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.aletasIzquierda}}" name="aletasIzquierda"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Reja de termo:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.rejadeTermo}}" name="rejadeTermo"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Claxon:</ion-label>
+                    <ion-checkbox disabled=true color="primary" slot="end" checked="{{asig.accesorios.claxon}}" name="claxon"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+
+
+        </ion-row>
+
+        <ion-list>
+            <form (ngSubmit)="enviarComentarioAccesorios (formAccesorios )" #formAccesorios="ngForm">
+                <ion-item>
+                    <ion-label>Notas:</ion-label>
+                    <ion-textarea [(ngModel)]="revision.comentarioDocumentos" name="comentarioDocumentos" rows="6" cols="20" placeholder="Escribe aquí las observaciones..."></ion-textarea>
+                </ion-item>
+                <ion-button type="submit" expand="block" (click)="irARevisionHerramientas()">
+                    Siguiente
+                </ion-button>
+            </form>
+        </ion-list>
+
+    </ion-grid>
+
+</ion-content>

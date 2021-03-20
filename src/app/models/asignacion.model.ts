@@ -5,6 +5,7 @@ export class AsignacionModel {
     nivelCombustible: string;
     accesorios: Accesorios;
     herramientas: Herramientas;
+    carroceria: string;
     firmas: Firmas;
     constructor(){
         this.idConductor=" ";
@@ -64,7 +65,7 @@ export class AsignacionModel {
     lucesdeCajayCabina: boolean;
     cielodeCabina: boolean;
     cortinas: boolean;
-    vidrios: boolean;
+    vidriosPuertaDerecha: boolean;
     vidriosPuertaIzquierda: boolean;
     aletasDerecha: boolean;
     aletasIzquierda: boolean;

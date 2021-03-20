@@ -1,0 +1,67 @@
+<app-header titulo="Revisión">
+
+</app-header>
+
+<ion-content class="ion-padding" mode="ios">
+
+
+    <ion-grid>
+        <ion-row *ngFor="let asig of( asignaciones | async) | filtro:folioAsignacion:'folioAsignacion'">
+            <ion-list-header>
+                <ion-label>Flujo de firmas</ion-label>
+            </ion-list-header>
+
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12">
+                <p>Recibo de conformidad la unidad que se describe, propiedad de esta empresa, para el desarrollo de mi trabajo y me responsabilizo del uso que se le da a la misma así también de las infracciones, disposiciones y reglamentos de y transito
+                    que se comentan por mi culpa o negligencia, quedando enterado que devolveré el vehículo de las mismas condiciones que se describe salvo el deterioro normal cuando así se me sea requerido. </p>
+            </ion-col>
+
+            <ion-col size="12" size-lg="12" size-md="12" size-sm="12">
+                <ion-card>
+                    <ion-item color="dark">
+                        <ion-label class="ion-text-center">Jefe de grupo</ion-label>
+                    </ion-item>
+                    <ion-img [src]="asig.firmas.jefedeGrupo" class="imgFirma"></ion-img>
+                </ion-card>
+                <ion-card>
+                    <ion-item color="dark">
+                        <ion-label class="ion-text-center">Taller</ion-label>
+                    </ion-item>
+                    <ion-img [src]="asig.firmas.taller" class="imgFirma"></ion-img>
+                </ion-card>
+                <ion-card>
+                    <ion-item color="dark">
+                        <ion-label class="ion-text-center">Jefe de ventas</ion-label>
+                    </ion-item>
+                    <ion-img [src]="asig.firmas.jefedeVentas" class="imgFirma"></ion-img>
+                </ion-card>
+                <ion-card>
+                    <ion-item color="dark">
+                        <ion-label class="ion-text-center">Vendedor</ion-label>
+                    </ion-item>
+                    <ion-img [src]="asig.firmas.vendedor" class="imgFirma"></ion-img>
+                </ion-card>
+
+
+
+
+            </ion-col>
+
+
+        </ion-row>
+
+        <ion-list>
+            <form (ngSubmit)="enviarComentarioFirmas (formAccesorios )" #formAccesorios="ngForm">
+                <ion-item>
+                    <ion-label>Notass:</ion-label>
+                    <ion-textarea [(ngModel)]="revision.comentarioHerramientas" name="comentarioDocumentos" rows="6" cols="20" placeholder="Escribe aquí las observaciones..."></ion-textarea>
+                </ion-item>
+                <ion-button type="submit" expand="block" (click)="irAFirmasRevision()">
+                    Siguiente
+                </ion-button>
+            </form>
+        </ion-list>
+
+    </ion-grid>
+
+</ion-content>

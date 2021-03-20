@@ -42,6 +42,7 @@ export class SignaturePadComponent implements OnInit {
 
   drawComplete() {
     this.signature = this.signaturePad.toDataURL('image/svg+xml');
+    console.log(this.signature);
   }
 
   onClickClean() {
@@ -50,6 +51,7 @@ export class SignaturePadComponent implements OnInit {
 
   onClickSuccess() {
     this.signatureEmitted.emit(this.signature);
+    console.log(this.signatureEmitted.emit(this.signature));
   }
 
 }

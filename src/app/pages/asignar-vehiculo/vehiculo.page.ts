@@ -21,7 +21,7 @@ export class VehiculoPage implements OnInit {
   constructor(
     private router:Router,
     private unidadesServices: UnidadesTransporteService,
-    private unidadesDocumentos: DataAsignacionService
+    private dataAsignacionService: DataAsignacionService
    ) { }
 
   
@@ -30,7 +30,7 @@ export class VehiculoPage implements OnInit {
   }
 
   enviarnoEco(){
-    this.unidadesDocumentos.sendnoEconomico(this.asignacion.noEconomico)
+    this.dataAsignacionService.sendnoEconomico(this.asignacion.noEconomico)
   }
   
   mostrarDocumentos(){

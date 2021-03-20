@@ -41,23 +41,63 @@ const routes: Routes = [
   },
   {
     path: 'carroceria',
-    loadChildren: () => import('./pages/carroceria/carroceria.module').then( m => m.CarroceriaPageModule)
+    loadChildren: () => import('./pages/asignar-carroceria/carroceria.module').then( m => m.CarroceriaPageModule)
   },
   {
     path: 'firmas',
     loadChildren: () => import('./pages/asignar-firmas/firmas.module').then( m => m.FirmasPageModule)
   },
   {
-    path: 'problemas-unidad',
-    loadChildren: () => import('./pages/revision-problemas-unidad/problemas-unidad.module').then( m => m.ProblemasUnidadPageModule)
-  },
-  {
-    path: 'tipo-servicio',
-    loadChildren: () => import('./pages/revision-tipo-servicio/tipo-servicio.module').then( m => m.TipoServicioPageModule)
-  },
-  {
     path: 'firmas-revision',
     loadChildren: () => import('./pages/revision-firmas/firmas-revision.module').then( m => m.FirmasRevisionPageModule)
+  },
+  {
+    path: 'revision-conductor',
+    loadChildren: () => import('./pages/revision-conductor/revision-conductor.module').then( m => m.RevisionConductorPageModule)
+  },
+  {
+    path: 'revision-vehiculo',
+    loadChildren: () => import('./pages/revision-vehiculo/revision-vehiculo.module').then( m => m.RevisionVehiculoPageModule)
+  },
+  {
+    path: 'revision-documentos',
+    loadChildren: () => import('./pages/revision-documentos/revision-documentos.module').then( m => m.RevisionDocumentosPageModule)
+  },
+  {
+    path: 'revision-nivel-combustible',
+    loadChildren: () => import('./pages/revision-nivel-combustible/revision-nivel-combustible.module').then( m => m.RevisionNivelCombustiblePageModule)
+  },
+  {
+    path: 'revision-accesorios',
+    loadChildren: () => import('./pages/revision-accesorios/revision-accesorios.module').then( m => m.RevisionAccesoriosPageModule)
+  },
+  {
+    path: 'revision-herramientas',
+    loadChildren: () => import('./pages/revision-herramientas/revision-herramientas.module').then( m => m.RevisionHerramientasPageModule)
+  },
+  {
+    path: 'revision-carroceria',
+    loadChildren: () => import('./pages/revision-carroceria/revision-carroceria.module').then( m => m.RevisionCarroceriaPageModule)
+  },
+  {
+    path: 'revision-flujo-firmas',
+    loadChildren: () => import('./pages/revision-flujo-firmas/revision-flujo-firmas.module').then( m => m.RevisionFlujoFirmasPageModule)
+  },
+  {
+    path: 'reporte',
+    loadChildren: () => import('./pages/reporte/reporte.module').then( m => m.ReportePageModule)
+  },
+  {
+    path: 'reporte-datos-generales',
+    loadChildren: () => import('./pages/reporte-datos-generales/reporte-datos-generales.module').then( m => m.ReporteDatosGeneralesPageModule)
+  },
+  {
+    path: 'reporte-danios',
+    loadChildren: () => import('./pages/reporte-danios/reporte-danios.module').then( m => m.ReporteDaniosPageModule)
+  },
+  {
+    path: 'reporte-servicios',
+    loadChildren: () => import('./pages/reporte-servicios/reporte-servicios.module').then( m => m.ReporteServiciosPageModule)
   },
 ];
 

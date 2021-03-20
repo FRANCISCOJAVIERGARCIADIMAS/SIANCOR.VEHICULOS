@@ -4,18 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TipoServicioPageRoutingModule } from './tipo-servicio-routing.module';
+import { ReportePageRoutingModule } from './reporte-routing.module';
 
-import { TipoServicioPage } from './tipo-servicio.page';
+import { ReportePage } from './reporte.page';
 import { ComponentsModule } from '../../components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TipoServicioPageRoutingModule,ComponentsModule
+    ReportePageRoutingModule,
+    ComponentsModule,
+    PipesModule
   ],
-  declarations: [TipoServicioPage]
+  declarations: [ReportePage]
 })
-export class TipoServicioPageModule {}
+export class ReportePageModule {}

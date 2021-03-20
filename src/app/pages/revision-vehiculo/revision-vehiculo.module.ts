@@ -4,22 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RevisionPageRoutingModule } from './revision-routing.module';
+import { RevisionVehiculoPageRoutingModule } from './revision-vehiculo-routing.module';
 
-import { RevisionPage } from './revision.page';
-import { ComponentsModule } from '../../components/components.module';
-
+import { RevisionVehiculoPage } from './revision-vehiculo.page';
 import { PipesModule } from '../../pipes/pipes.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RevisionPageRoutingModule,
+    RevisionVehiculoPageRoutingModule,
     ComponentsModule,
     PipesModule
   ],
-  declarations: [RevisionPage]
+  declarations: [RevisionVehiculoPage]
 })
-export class RevisionPageModule {}
+export class RevisionVehiculoPageModule {}

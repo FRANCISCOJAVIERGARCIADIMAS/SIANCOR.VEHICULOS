@@ -1,0 +1,34 @@
+<app-header titulo="Revisión">
+
+</app-header>
+
+
+<ion-content class="ion-padding" mode="ios">
+
+
+    <ion-grid>
+        <ion-row *ngFor="let asig of( asignaciones | async) | filtro:folioAsignacion:'folioAsignacion'">
+            <ion-list-header>
+                <ion-label>Carroceria</ion-label>
+            </ion-list-header>
+            <ion-card>
+                <ion-img [src]="asig.carroceria"></ion-img>
+            </ion-card>
+
+        </ion-row>
+
+        <ion-list>
+            <form (ngSubmit)="enviarComentarioCarroceria (formAccesorios )" #formAccesorios="ngForm">
+                <ion-item>
+                    <ion-label>Notas:</ion-label>
+                    <ion-textarea [(ngModel)]="revision.comentarioCarroceria" name="comentarioCarroceria" rows="6" cols="20" placeholder="Escribe aquí las observaciones..."></ion-textarea>
+                </ion-item>
+                <ion-button type="submit" expand="block" (click)="irARevisionFlujoFirmas()">
+                    Siguiente
+                </ion-button>
+            </form>
+        </ion-list>
+
+    </ion-grid>
+
+</ion-content>

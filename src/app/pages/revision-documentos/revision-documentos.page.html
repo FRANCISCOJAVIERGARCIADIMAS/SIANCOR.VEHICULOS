@@ -1,0 +1,77 @@
+<app-header titulo="Revisión">
+
+</app-header>
+
+
+<ion-content class="ion-padding">
+
+
+    <ion-list-header>
+
+        <ion-label>Documentos</ion-label>
+    </ion-list-header>
+
+    <ion-list *ngFor="let asig of( asignaciones | async) | filtro:folioAsignacion:'folioAsignacion'">
+
+        <ion-item>
+            <ion-label>Placas de circulacion: </ion-label>
+            <ion-checkbox disabled=true color="primary" slot="end" name="placasCirculacion" checked="{{asig.unidadTransporte.documentos.placasCirculacion}}">
+            </ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tarjeta de circulacion: </ion-label>
+            <ion-checkbox disabled=true color="primary" slot="end" name="tarjetadeCirculacion" checked="{{asig.unidadTransporte.documentos.tarjetadeCirculacion}}"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Poliza de seguro: </ion-label>
+            <ion-checkbox disabled=true color="primary" slot="end" name="polizaSeguro" checked="{{asig.unidadTransporte.documentos.polizadeSeguro}}"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-radio-group mode="md" name="verificacionVehicular" value="{{asig.unidadTransporte.documentos.verificacionVehicular}}">
+
+                <ion-label>Verificacion:</ion-label>
+                <ion-item>
+                    <ion-label>Primer semestre:</ion-label>
+                    <ion-radio disabled=true slot="start" value="primerSemestre" name="primerSemestre"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Año:</ion-label>
+                    <ion-radio disabled=true slot="start" value="Anio" name="anio"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+        </ion-item>
+        <ion-item>
+            <ion-label>Tenencia:</ion-label>
+            <ion-checkbox disabled=true color="primary" slot="end" checked={{asig.unidadTransporte.documentos.tenencia}}></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Engomado de placas:</ion-label>
+            <ion-checkbox disabled=true color="primary" slot="end" checked={{asig.unidadTransporte.documentos.engomado}}></ion-checkbox>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <form (ngSubmit)="enviarComentarioDocumentos (formAsignacion )" #formAsignacion="ngForm" mode="ios">
+            <ion-item>
+                <ion-label>Notas:</ion-label>
+                <ion-textarea [(ngModel)]="revision.comentarioDocumentos" name="comentarioDocumentos" rows="6" cols="20" placeholder="Escribe aquí las observaciones..."></ion-textarea>
+            </ion-item>
+
+            <ion-button type="submit" expand="block" (click)="irARevisionAccesorios()">
+                Siguiente
+            </ion-button>
+
+        </form>
+
+    </ion-list>
+
+
+
+
+
+</ion-content>

@@ -12,7 +12,6 @@ export class ConductoresService {
 
   getConductores(){
     return this.http.get<Persona[]>('/assets/data/conductores.json');
-
   }
  
 }

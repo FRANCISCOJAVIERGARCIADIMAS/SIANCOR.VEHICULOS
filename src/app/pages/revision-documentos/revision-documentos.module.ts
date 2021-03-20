@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RevisionPageRoutingModule } from './revision-routing.module';
+import { RevisionDocumentosPageRoutingModule } from './revision-documentos-routing.module';
 
-import { RevisionPage } from './revision.page';
+import { RevisionDocumentosPage } from './revision-documentos.page';
 import { ComponentsModule } from '../../components/components.module';
-
 import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
@@ -16,10 +15,10 @@ import { PipesModule } from '../../pipes/pipes.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    RevisionPageRoutingModule,
+    RevisionDocumentosPageRoutingModule,
     ComponentsModule,
     PipesModule
   ],
-  declarations: [RevisionPage]
+  declarations: [RevisionDocumentosPage]
 })
-export class RevisionPageModule {}
+export class RevisionDocumentosPageModule {}
