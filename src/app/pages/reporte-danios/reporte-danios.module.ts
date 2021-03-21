@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ReporteDaniosPageRoutingModule } from './reporte-danios-routing.module';
 
 import { ReporteDaniosPage } from './reporte-danios.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReporteDaniosPageRoutingModule
+    ReporteDaniosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ReporteDaniosPage]
 })

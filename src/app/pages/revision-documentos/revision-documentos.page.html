@@ -3,7 +3,7 @@
 </app-header>
 
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" mode="ios">
 
 
     <ion-list-header>
@@ -14,25 +14,25 @@
     <ion-list *ngFor="let asig of( asignaciones | async) | filtro:folioAsignacion:'folioAsignacion'">
 
         <ion-item>
-            <ion-label>Placas de circulacion: </ion-label>
+            <ion-label>Placas de circulación: </ion-label>
             <ion-checkbox disabled=true color="primary" slot="end" name="placasCirculacion" checked="{{asig.unidadTransporte.documentos.placasCirculacion}}">
             </ion-checkbox>
         </ion-item>
 
         <ion-item>
-            <ion-label>Tarjeta de circulacion: </ion-label>
+            <ion-label>Tarjeta de circulación: </ion-label>
             <ion-checkbox disabled=true color="primary" slot="end" name="tarjetadeCirculacion" checked="{{asig.unidadTransporte.documentos.tarjetadeCirculacion}}"></ion-checkbox>
         </ion-item>
 
         <ion-item>
-            <ion-label>Poliza de seguro: </ion-label>
+            <ion-label>Póliza de seguro: </ion-label>
             <ion-checkbox disabled=true color="primary" slot="end" name="polizaSeguro" checked="{{asig.unidadTransporte.documentos.polizadeSeguro}}"></ion-checkbox>
         </ion-item>
 
         <ion-item>
             <ion-radio-group mode="md" name="verificacionVehicular" value="{{asig.unidadTransporte.documentos.verificacionVehicular}}">
 
-                <ion-label>Verificacion:</ion-label>
+                <ion-label>Verificación:</ion-label>
                 <ion-item>
                     <ion-label>Primer semestre:</ion-label>
                     <ion-radio disabled=true slot="start" value="primerSemestre" name="primerSemestre"></ion-radio>

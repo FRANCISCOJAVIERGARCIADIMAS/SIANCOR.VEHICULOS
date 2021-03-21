@@ -5,7 +5,7 @@
         "fecha": "02-02-21",
         "conductor": {
             "idConductor": "C-01",
-            "nombre": "Juan Jazmin Martínez",
+            "nombre": "Santiago Guzman Loera",
             "departamento": "Ventas",
             "noLicencia": "FG-924226",
             "tipo": "B",
@@ -13,7 +13,7 @@
             "estado": "Veracruz"
         },
         "unidadTransporte": {
-            "noEconomico": "JSL-933",
+            "noEconomico": "REL-933",
             "marca": "Chevrolet",
             "modelo": "2019",
             "tipo": "Batea",
@@ -94,7 +94,7 @@
         "folioAsignacion": "AS-002",
         "fecha": "02-02-21",
         "conductor": {
-            "idConductor": "C-01",
+            "idConductor": "C-02",
             "nombre": "Juan Jazmin Martínez",
             "departamento": "Ventas",
             "noLicencia": "FG-924226",
@@ -103,7 +103,7 @@
             "estado": "Veracruz"
         },
         "unidadTransporte": {
-            "noEconomico": "JSL-933",
+            "noEconomico": "VCS-933",
             "marca": "Chevrolet",
             "modelo": "2019",
             "tipo": "Batea",
@@ -184,8 +184,8 @@
         "folioAsignacion": "AS-003",
         "fecha": "02-02-21",
         "conductor": {
-            "idConductor": "C-01",
-            "nombre": "Juan Jazmin Martínez",
+            "idConductor": "C-03",
+            "nombre": "Jose Ortiz Ortiz",
             "departamento": "Ventas",
             "noLicencia": "FG-924226",
             "tipo": "B",

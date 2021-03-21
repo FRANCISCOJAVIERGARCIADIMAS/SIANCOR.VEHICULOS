@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ReporteDatosGeneralesPageRoutingModule } from './reporte-datos-generales-routing.module';
 
 import { ReporteDatosGeneralesPage } from './reporte-datos-generales.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReporteDatosGeneralesPageRoutingModule
+    ReporteDatosGeneralesPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ReporteDatosGeneralesPage]
 })

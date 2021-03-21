@@ -1,4 +1,4 @@
-export interface Unidad {
+export interface Danios {
   idDanio: string;
   nombre: string;
   descripcion: string;

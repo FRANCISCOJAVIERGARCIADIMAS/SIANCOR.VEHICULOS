@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ReporteModel } from '../../models/reportes';
+import { Danios } from '../../interfaces/interfaces-danios';
+import { DaniosService } from '../../services/danios.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-reporte-danios',
@@ -7,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReporteDaniosPage implements OnInit {
 
-  constructor() { }
+  danios: Observable<Danios[]>;
+
+  reporte = new ReporteModel();
+
+  constructor( private daniosServices: DaniosService) { }
 
   ngOnInit() {
+              this.danios = this.daniosServices.getDanios();
   }
+
+  enviarServicios(form: NgForm){
+    
+  }
+
 
 }

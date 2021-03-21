@@ -1,9 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>reporteDatosGenerales</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Reporte">
 
-<ion-content>
+</app-header>
+
+<ion-content class="ion-padding">
+
+    <form (ngSubmit)="enviarDatosGenerales (formRevision )" #formRevision="ngForm" mode="ios">
+        <ion-list-header>
+
+            <ion-label>Datos generales</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Tipo de reporte:</ion-label>
+            <ion-select name=tipoReporte [(ngModel)]="reporte.tipoReporte" interface="action-sheet">
+                <ion-select-option value="danios"> Daños </ion-select-option>
+                <ion-select-option value="servicios"> Servicios </ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Descripcion</ion-label>
+            <ion-textarea name="descripcion" [(ngModel)]="reporte.descripcion" rows="6" cols="20" placeholder="Escribe aqui..."></ion-textarea>
+        </ion-item>
+
+        <app-card-camera label="Foto de la unidad" icon="car-outline" [photo]="myPhoto" (photoEmitted)="savePhoto($event)">
+
+        </app-card-camera>
+
+
+        <ion-button *ngIf="reporte.tipoReporte == 'danios'" expand="block" type="submit" (click)="irAReporteDanios()">
+            Siguiente
+        </ion-button>
+
+        <ion-button *ngIf="reporte.tipoReporte == 'servicios'" expand="block" type="submit" (click)="irAReporteServicios()">
+            Siguiente
+        </ion-button>
+
+    </form>
+
+
 
 </ion-content>

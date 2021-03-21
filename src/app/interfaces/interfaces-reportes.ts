@@ -1,4 +1,5 @@
-export class ReporteModel {
+export interface Reportes {
+    idReporte: string;
     folioAsignacion: string;
     tipoReporte: string;
     descripcion: string;
@@ -6,8 +7,5 @@ export class ReporteModel {
     problemasSeleccionados: string;
     serviciosSeleccionados: string;
     danioRelacionado: string;
-    constructor(){
-      this.folioAsignacion=" ";
-  }
   }
   

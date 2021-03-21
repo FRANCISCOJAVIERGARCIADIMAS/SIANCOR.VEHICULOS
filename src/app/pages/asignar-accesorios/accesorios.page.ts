@@ -23,7 +23,7 @@ export class AccesoriosPage implements OnInit {
     limpiadores:false,
     depositodeAgua:false,
     perillaPalancaVelocidad:false,
-    viceras:false,
+    viseras:false,
     manijasdeElevadores:false,
     tapasdePuertas:false,
     cenicero:false,

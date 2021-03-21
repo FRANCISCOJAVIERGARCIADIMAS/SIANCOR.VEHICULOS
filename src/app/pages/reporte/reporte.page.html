@@ -2,33 +2,49 @@
 
 </app-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" mode="ios">
+
+
+    <ion-list-header>
+
+        <ion-label>Inicio</ion-label>
+    </ion-list-header>
+
+
+    <ion-item>
+        <ion-label>Selecciona un filtro:</ion-label>
+        <ion-select name=noEconomico [(ngModel)]="itemSeleccionado" interface="action-sheet">
+            <ion-select-option value="folioAsignacion"> Folio asignacion</ion-select-option>
+            <ion-select-option value="unidadTransporte.noEconomico"> Unidad </ion-select-option>
+            <ion-select-option value="condcutor.idConductor"> Conductor </ion-select-option>
+        </ion-select>
+    </ion-item>
 
     <form (ngSubmit)="enviarFolioA (formAsignacion )" #formAsignacion="ngForm" mode="ios">
-        <ion-list-header>
-
-            <ion-label>Inicio</ion-label>
-        </ion-list-header>
-        <ion-item>
-            <ion-label>Selecciona un filtro:</ion-label>
-            <ion-select name=noEconomico [(ngModel)]="itemSeleccionado" interface="action-sheet">
-                <ion-select-option value="folioAsignacion"> Folio asignacion</ion-select-option>
-                <ion-select-option value="noEconomico"> Unidad </ion-select-option>
-                <ion-select-option value="idConductor"> Conductor </ion-select-option>
-            </ion-select>
-        </ion-item>
-        <ion-item>
-            <ion-select name=noEconomico [(ngModel)]="reporte.folioAsignacion" interface="action-sheet">
+        <ion-item *ngIf="itemSeleccionado == 'folioAsignacion'">
+            <ion-label>Selecciona el folio:</ion-label>
+            <ion-select name=folioAsignacion [(ngModel)]="reporte.folioAsignacion" interface="action-sheet">
                 <ion-select-option *ngFor="let asig of asignaciones | async" value={{asig.folioAsignacion}}> {{asig.folioAsignacion}}</ion-select-option>
             </ion-select>
         </ion-item>
-
-
-        <ion-item>
-            <ion-label>Datos de la asignacion:</ion-label>
+        <ion-item *ngIf="itemSeleccionado == 'unidadTransporte.noEconomico'">
+            <ion-label>Selecciona el no. Eco:</ion-label>
+            <ion-select name=noEconomico [(ngModel)]="reporte.folioAsignacion" interface="action-sheet">
+                <ion-select-option *ngFor="let asig of asignaciones | async" value={{asig.folioAsignacion}}> {{asig.unidadTransporte.noEconomico}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item *ngIf="itemSeleccionado == 'condcutor.idConductor'">
+            <ion-label>Selecciona el conductor:</ion-label>
+            <ion-select name=noEconomico [(ngModel)]="reporte.folioAsignacion" interface="action-sheet">
+                <ion-select-option *ngFor="let asig of asignaciones | async" value={{asig.folioAsignacion}}> {{asig.conductor.nombre}}</ion-select-option>
+            </ion-select>
         </ion-item>
 
-        <ion-list *ngFor="let asigna of( asignaciones | async) | filtro:revision.folioAsignacion:'folioAsignacion'">
+        <ion-item>
+            <ion-label>Datos de la asignación:</ion-label>
+        </ion-item>
+
+        <ion-list *ngFor="let asigna of( asignaciones | async) | filtro:reporte.folioAsignacion:'folioAsignacion'">
             <ion-item>
                 <ion-label>Fecha: {{asigna.fecha}} </ion-label>
             </ion-item>
@@ -39,7 +55,7 @@
                 <ion-label>Conductor: {{asigna.conductor.nombre}} </ion-label>
             </ion-item>
 
-            <ion-button expand="block" type="submit" (click)="irARevisionConductor()">
+            <ion-button expand="block" type="submit" (click)="irAReporteDatosGenerales()">
                 Siguiente
             </ion-button>
 

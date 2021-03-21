@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>reporteDanios</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Reporte"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding" mode="ios">
+
+    <form (ngSubmit)="enviarServicios (formReporte )" #formReporte="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion">Seleccione los daños requeridos</ion-label>
+        <ion-list-header>
+
+            <ion-label>Daños</ion-label>
+        </ion-list-header>
+
+
+
+        <ion-list *ngFor="let dan of danios | async">
+
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label> {{dan.nombre}}:</ion-label>
+                    <ion-checkbox color="primary" slot="end" name="espejoLateralDerecho"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+
+        </ion-list>
+
+
+
+        <ion-button type="submit" expand="block">
+            Finalizar
+        </ion-button>
+
+
+    </form>
+
 
 </ion-content>

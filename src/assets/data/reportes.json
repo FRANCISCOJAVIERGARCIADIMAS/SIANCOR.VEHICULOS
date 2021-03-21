@@ -1,0 +1,33 @@
+[
+
+    {
+        "idReporte": "REP-001",
+        "folioAsignacion": "AS-001",
+        "tipoReporte": "danios",
+        "descripcion": "FG-924226",
+        "fotografia": "B",
+        "problemasSeleccionados": "04-09-2021",
+        "serviciosSeleccionados": "Veracruz",
+        "danioRelacionado": true
+    },
+    {
+        "idReporte": "REP-002",
+        "folioAsignacion": "AS-002",
+        "tipoReporte": "danios",
+        "descripcion": "FG-924226",
+        "fotografia": "B",
+        "problemasSeleccionados": "04-09-2021",
+        "serviciosSeleccionados": "Veracruz",
+        "danioRelacionado": true
+    },
+    {
+        "idReporte": "REP-003",
+        "folioAsignacion": "AS-003",
+        "tipoReporte": "danios",
+        "descripcion": "FG-924226",
+        "fotografia": "B",
+        "problemasSeleccionados": "04-09-2021",
+        "serviciosSeleccionados": "Veracruz",
+        "danioRelacionado": true
+    }
+]

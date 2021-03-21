@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Asignaciones } from '../interfaces/interfaces-asignaciones';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +26,9 @@ export class DataAsignacionService {
   private herramientas = new BehaviorSubject<{}>({});
   $getHerramientas = this.documentos.asObservable();
 
-  constructor() { }
+  constructor(
+              private http: HttpClient
+            ) { }
   
 sendnoEconomico(data:any){
   this.noEconomico.next(data);
@@ -45,5 +49,8 @@ sendHerramientas(data:any){
   this.documentos.next(data);
 }
 
+getAsignaciones(){
+  return this.http.get<Asignaciones[]>('/assets/data/asignaciones.json');
+}
 
 }

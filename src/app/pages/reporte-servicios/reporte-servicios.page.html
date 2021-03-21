@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>reporteServicios</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Reporte">
 
-<ion-content>
+
+</app-header>
+<ion-content class="ion-padding" mode="ios">
+
+    <form (ngSubmit)="enviarServicios (formReporte )" #formReporte="ngForm" mode="ios">
+
+        <ion-label class="textIndicacion">Seleccione los servicios requeridos</ion-label>
+        <ion-list-header>
+
+            <ion-label>Servicios</ion-label>
+        </ion-list-header>
+
+
+
+        <ion-list *ngFor="let serv of servicios | async">
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label> {{serv.nombre}}:</ion-label>
+                    <ion-checkbox color="primary" slot="end" name="espejoLateralDerecho"></ion-checkbox>
+                </ion-item>
+            </ion-col>
+        </ion-list>
+        <br>
+
+        <ion-list>
+
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+
+                <p class="textIndicacion">Relacionar reporte de daño</p>
+
+            </ion-col>
+            <ion-item>
+                <ion-label>Reporte:</ion-label>
+                <ion-select name=tipoReporte interface="action-sheet">
+                    <ion-select-option value="danios" *ngFor="let rep of reportes | async"> {{rep.idReporte}} </ion-select-option>
+                </ion-select>
+            </ion-item>
+
+        </ion-list>
+        <br>
+        <ion-button type="submit" expand="block">
+            Finalizar
+        </ion-button>
+
+
+    </form>
+
 
 </ion-content>

@@ -1,0 +1,38 @@
+[
+
+    {
+        "idConductor": "d-01",
+        "nombre": "Fugas",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "idConductor": "d-02",
+        "nombre": "Direccion",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    },
+    {
+        "idConductor": "d-03",
+        "nombre": "Sonido Frenos",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "idConductor": "d-04",
+        "nombre": "Perdida de potencia",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    },
+    {
+        "idConductor": "d-05",
+        "nombre": "Cambio suspencion",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "idConductor": "d-06",
+        "nombre": "Sin bateria",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    },
+    {
+        "idConductor": "d-07",
+        "nombre": "Humo",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    }
+]

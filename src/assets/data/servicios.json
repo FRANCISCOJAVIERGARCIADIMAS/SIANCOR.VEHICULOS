@@ -1,0 +1,28 @@
+[
+
+    {
+        "idConductor": "s-01",
+        "nombre": "Lavado",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "idConductor": "s-02",
+        "nombre": "Rotulacion",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    },
+    {
+        "idConductor": "s-03",
+        "nombre": "Muelles",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "idConductor": "s-04",
+        "nombre": "Vestiduras",
+        "descripcion": "Fusce mattis velit a turpis congue, vel blandit risus venenatis."
+    },
+    {
+        "idConductor": "s-05",
+        "nombre": "Alineacion y balanceo",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
