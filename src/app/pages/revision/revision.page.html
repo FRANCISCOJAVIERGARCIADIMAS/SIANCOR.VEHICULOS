@@ -15,7 +15,7 @@
             <ion-input name="gerenteGeneral" type="text" placeholder="Gerente general"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label>Selecciona el folio de asignacion:</ion-label>
+            <ion-label>Selecciona el folio de asignación:</ion-label>
         </ion-item>
         <ion-item>
             <ion-select name=noEconomico [(ngModel)]="revision.folioAsignacion" interface="action-sheet">
@@ -23,7 +23,7 @@
             </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label>Datos de la asignacion:</ion-label>
+            <ion-label>Datos de la asignación:</ion-label>
         </ion-item>
 
         <ion-list *ngFor="let asigna of( asignaciones | async) | filtro:revision.folioAsignacion:'folioAsignacion'">
