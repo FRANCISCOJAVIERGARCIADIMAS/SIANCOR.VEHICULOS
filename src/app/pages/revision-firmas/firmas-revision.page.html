@@ -10,6 +10,20 @@
                     <label>Observaciones:</label>
                     <ion-input class="ion-padding" placeholder="Escribe aqui"></ion-input>
                 </ion-col>
+
+                <ion-col size="12" size-lg="6" size-md="6" size-sm="12">
+                    <ion-list-header>
+                        <ion-label>Calificar</ion-label>
+                    </ion-list-header>
+                    <ion-card class="ion-text-center">
+                        <ion-icon name="star-sharp" size="large" (click)="valor(1)" value="1" class={{pintar1}}></ion-icon>
+                        <ion-icon name="star-sharp" size="large" (click)="valor(2)" value="2" class={{pintar2}}></ion-icon>
+                        <ion-icon name="star-sharp" size="large" (click)="valor(3)" value="3" class={{pintar3}}></ion-icon>
+                        <ion-icon name="star-sharp" size="large" (click)="valor(4)" value="4" class={{pintar4}}></ion-icon>
+                        <ion-icon name="star-sharp" size="large" (click)="valor(5)" value="5" class={{pintar5}}></ion-icon>
+                    </ion-card>
+                </ion-col>
+
                 <ion-col size="12" size-lg="12" size-md="12" size-sm="12" class="ion-padding">
                     <ion-list-header>
                         <ion-label>Flujo de firmas</ion-label>
@@ -20,6 +34,9 @@
                     <app-signature-pad label="Gerente general"> </app-signature-pad>
                 </ion-col>
             </ion-row>
+
+
+
         </ion-grid>
 
 
