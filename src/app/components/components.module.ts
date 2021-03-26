@@ -9,6 +9,7 @@ import { CardCameraComponent } from './card-camera/card-camera.component';
 import { SignaturePadComponent } from './signature-pad/signature-pad.component';
 import  {  SignaturePadModule  }  from  'angular2-signaturepad' ;
 // import { SignaturePad } from 'angular2-signaturepad/angular2-signaturepad';
+import { PopoverOpcionesUsuarioComponent } from './popover-opciones-usuario/popover-opciones-usuario.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import  {  SignaturePadModule  }  from  'angular2-signaturepad' ;
     AgregarComentarioComponent,
     CardCameraComponent,
     // SignaturePadModule,
-    SignaturePadComponent
+    SignaturePadComponent,
+    PopoverOpcionesUsuarioComponent
   ],
   exports:[
     HeaderComponent,
     AgregarComentarioComponent,
     CardCameraComponent,
     SignaturePadComponent,
+    PopoverOpcionesUsuarioComponent
     // SignaturePad
   ],
   imports: [
