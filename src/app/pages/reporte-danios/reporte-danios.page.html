@@ -10,8 +10,6 @@
             <ion-label>Daños</ion-label>
         </ion-list-header>
 
-
-
         <ion-list *ngFor="let dan of danios | async">
 
             <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
@@ -19,11 +17,17 @@
                     <ion-label> {{dan.nombre}}:</ion-label>
                     <ion-checkbox color="primary" slot="end" name="espejoLateralDerecho"></ion-checkbox>
                 </ion-item>
+
             </ion-col>
-
         </ion-list>
-
-
+        <ion-list>
+            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                <ion-item>
+                    <ion-label>Otro:</ion-label>
+                    <ion-input type="text" placeholder="Escribe aqui"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-list>
 
         <ion-button type="submit" expand="block">
             Finalizar

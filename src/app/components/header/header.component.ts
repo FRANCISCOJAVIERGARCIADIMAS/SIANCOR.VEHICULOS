@@ -15,8 +15,9 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {}
+  
   cancelar(){
-    this.router.navigate(['/'])
+    this.router.navigate(['/home'])
   }
 
 }

@@ -3,13 +3,18 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./pages/iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'iniciar-sesion',
     pathMatch: 'full'
+    
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'asignar',
@@ -99,6 +104,11 @@ const routes: Routes = [
     path: 'reporte-servicios',
     loadChildren: () => import('./pages/reporte-servicios/reporte-servicios.module').then( m => m.ReporteServiciosPageModule)
   },
+  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./pages/iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },
+
 ];
 
 @NgModule({

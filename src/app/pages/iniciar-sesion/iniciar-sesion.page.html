@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true" fixed padding center text-center keyboard-offset>
+    <div id="container">
+
+        <ion-img src="/assets/img/logo.png"></ion-img>
+        <strong>Bienvenido a SIANCOR</strong>
+        <p>A continuación inicie sesión</p>
+
+        <form>
+            <ion-list>
+                <ion-item>
+
+                    <ion-label position="floating">Usuario *</ion-label>
+                    <ion-input required name="txtUsername" type="text" onkeyup="this.value = this.value.normalize('NFD').toLowerCase().replace(/([^0-9a-z.])/ig,'');"></ion-input>
+                    <ion-text color="medium" slot="end" class="domainLabel">
+                        <small>@grupopilsar.com.mx</small>
+                    </ion-text>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Contraseña *</ion-label>
+                    <ion-input required name="txtPassword" type="password"></ion-input>
+                </ion-item>
+            </ion-list>
+
+            <ion-button expand="block" color="primary" type="submit" (click)="iniciarSesion()">
+                Ingresar
+            </ion-button>
+        </form>
+
+    </div>
+</ion-content>
+
+<ion-footer mode="ios">
+    <ion-item>
+        <ion-note slot="end">
+            <p><small color="light">v0.4.3.3</small></p>
+        </ion-note>
+    </ion-item>
+</ion-footer>
