@@ -4,37 +4,35 @@
 
     <form (ngSubmit)="enviarServicios (formReporte )" #formReporte="ngForm" mode="ios">
 
-        <ion-label class="textIndicacion">Seleccione los daños requeridos</ion-label>
-        <ion-list-header>
-
-            <ion-label>Daños</ion-label>
-        </ion-list-header>
-
-        <ion-list *ngFor="let dan of danios | async">
-
-            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
-                <ion-item>
-                    <ion-label> {{dan.nombre}}:</ion-label>
-                    <ion-checkbox color="primary" slot="end" name="espejoLateralDerecho"></ion-checkbox>
-                </ion-item>
-
-            </ion-col>
-        </ion-list>
-        <ion-list>
-            <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
-                <ion-item>
-                    <ion-label>Otro:</ion-label>
-                    <ion-input type="text" placeholder="Escribe aqui"></ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-list>
-
-        <ion-button type="submit" expand="block">
-            Finalizar
-        </ion-button>
-
-
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label class="textIndicacion">Seleccione los daños requeridos</ion-label>
+                    <ion-list-header>
+                        <ion-label>Daños</ion-label>
+                    </ion-list-header>
+                </ion-col>
+                <ion-col *ngFor="let dan of danios | async" size="12" size-lg="4" size-md="6" size-sm="12">
+                    <ion-item>
+                        <ion-label> {{dan.nombre}}:</ion-label>
+                        <ion-checkbox color="primary" slot="end" name="x"></ion-checkbox>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="12" size-lg="4" size-md="6" size-sm="12">
+                    <ion-item>
+                        <ion-label>Otro:</ion-label>
+                        <ion-input type="text" placeholder="Escribe aqui" name="otro"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-button type="submit" expand="block">
+                        Finalizar
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </form>
-
 
 </ion-content>
